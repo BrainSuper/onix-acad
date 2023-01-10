@@ -1,0 +1,113 @@
+@import "../variables/variables.sass"
+@import "../mixins/mixins.sass"
+.promo
+  position: relative
+  min-height: 1080px
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.0001) 0%, #1A1A1A 100%), linear-gradient(0deg, rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)),  url("../images/mainBg.jpg") center/cover  no-repeat
+  .container
+    position: static
+  .header
+    min-height: 90px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @media (max-width: 590px)
+      padding-top: 10px
+      flex-direction: column
+    &_logo
+      display: flex
+      justify-content: center
+      align-items: baseline
+      img:nth-child(2)
+        margin-left: 9px
+    &_nav
+      display: flex
+      justify-content: center
+      align-items: center
+      list-style: none
+      &_item
+        font-style: normal
+        font-weight: 700
+        font-size: 14px
+        line-height: 90px
+        color: $primary
+        cursor: pointer
+        transition: 0.15s ease-in
+        &:hover
+          color: $second
+      &_item:nth-child(1)
+        margin-right: 45px
+      &_item:nth-child(2)
+        margin-right: 55px
+      &_item:nth-child(3)
+        margin-right: 36px
+      &_item:nth-child(4)
+        margin-right: 11px
+  &_line
+    position: absolute
+    top: 89px
+    left: 0
+    height: 2px
+    width: 100%
+    margin: 0 auto
+    background-color: $primary
+    mix-blend-mode: normal
+    opacity: 0.1
+  &_title
+    margin-top: 80px
+    font-size: 72px
+    line-height: 84px
+    text-align: center
+    font-weight: 300
+    letter-spacing: 0.1em
+    text-transform: capitalize
+    color: $primary
+    span
+      font-weight: 700
+    @media (max-width: 1024px)
+      font-size: 62px
+    @media (max-width: 768px)
+      font-size: 48px
+    @media (max-width: 590px)
+      font-size: 40px
+  &_descr
+    max-width: 595px
+    margin: 16px auto 0
+    font-weight: 400
+    font-size: 16px
+    line-height: 26px
+    text-align: center
+    color: $primary
+    opacity: 0.7
+    @media (max-width: 590px)
+      font-size: 14px
+  &_button
+    @include mainButton
+    margin: 40px auto 0
+  &_info
+    width: 100%
+    margin: 70px auto 0
+    display: flex
+    justify-content: space-between
+    @media (max-width: 425px)
+      margin-top: 35px
+    &_item
+      max-width: 245px
+      min-height: 95px
+      &_logo
+        display: block
+        margin: 0 auto 13px
+      &_content, &_descr
+        font-weight: 400
+        line-height: 30px
+        text-align: center
+        color: $primary
+      &_content
+        font-size: 16px
+      &_descr
+        font-size: 14px
+        opacity: 0.5
+
+
+
+

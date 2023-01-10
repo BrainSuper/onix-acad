@@ -1,0 +1,48 @@
+@import "../mixins/mixins.sass"
+
+.chefs
+  padding-top: 90px
+  min-height: 432px
+  background-color: $sectionColor
+  h1
+    @include sectionTitle
+  h2
+    @include sectionSubtitle
+  &__line
+    @include greenLine
+  &__wrapper
+    margin-top: 38px
+    display: flex
+    justify-content: space-between
+    @media (max-width: 1024px)
+      flex-direction: column
+      align-items: center
+    &__item
+      width: 350px
+      display: flex
+      flex-direction: column
+      @media (max-width: 1024px)
+        margin-bottom: 20px
+      &__info
+        display: flex
+        margin-bottom: 24px
+        justify-content: flex-start
+        align-items: center
+        &__person
+          margin-left: 24px
+          h3, &__status
+            font-weight: 400
+          h3
+            font-size: 18px
+            line-height: 21px
+            letter-spacing: -0.225px
+            color: $primary
+          &__status
+            margin-top: 6px
+            font-size: 12px
+            line-height: 16px
+            letter-spacing: -0.15px
+            color: rgba(255, 255, 255, 0.5)
+      &__works
+        display: flex
+        justify-content: space-between

@@ -1,0 +1,76 @@
+@import "../mixins/mixins.sass"
+.about
+  min-height: 736px
+  background-color: $sectionColor
+
+
+  .container
+    margin-top: -240px
+    padding-top: 60px
+    padding-bottom: 90px
+    background: #252525
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1)
+    border-radius: 6px
+  h1
+    @include sectionTitle
+  h2
+    @include sectionSubtitle
+    top: 102px
+    width: 100%
+    @media (max-width: 1024px)
+      font-size: 24px
+  &_descr
+    max-width: 734px
+    margin: 16px auto 0
+    font-weight: 400
+    font-size: 16px
+    line-height: 30px
+    text-align: center
+    color: #A6A6A6
+  .itc-slider
+    max-width: 734px
+    margin: 90px auto 0
+
+    &__item
+      flex: 0 0 50%
+      max-width: 50%
+      display: flex
+      justify-content: center
+      @media (max-width: 768px)
+        flex: 0 0 100%
+        max-width: 100%
+      img
+
+    &__btn
+      width: 60px
+      height: 60px
+      background: #262626
+      border: 2px solid #303030
+      border-radius: 50%
+      &_prev
+        right: calc(100% + 61px)
+        left: unset
+      @media (max-width: 1024px)
+        top: 113%
+        left: 40%
+      @media (max-width: 768px)
+        left: 35%
+      @media (max-width: 425px)
+        left: 32%
+      &_next
+        left: calc(100% + 61px)
+        @media (max-width: 1024px)
+          top: 113%
+          right: 40%
+          left: unset
+        @media (max-width: 768px)
+          right: 35%
+        @media (max-width: 425px)
+          right: 32%
+      &_next::before
+        background-image: url("../icons/next.png")
+      &_prev::before
+        background-image: url("../icons/prev.png")
+
+
+

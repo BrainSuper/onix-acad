@@ -1,0 +1,115 @@
+@import '../mixins/mixins.sass'
+
+.social
+  min-height: 750px
+  padding: 90px 0 120px
+  background-color: $sectionColor
+  h1
+    @include sectionTitle
+  h2
+    @include sectionSubtitle
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    @media (max-width: 1024px)
+      justify-content: space-around
+    @media (max-width: 768px)
+      flex-direction: column
+      align-items: center
+
+    &__item
+      width: 350px
+      height: 330px
+      background-color: $cardBgColor
+      border-radius: 6px
+      @media (max-width: 1024px)
+        margin-bottom: 10px
+      .img__block
+        padding: 0
+      &__main
+        padding: 20px 15px 20px 30px
+        height: 240px
+
+        &__images
+          width: 350px
+          height: 240px
+          display: flex
+          justify-content: space-between
+          flex-wrap: wrap
+          overflow: auto
+          &__item
+            width: 115px
+            height: 120px
+            a
+              list-style: none
+              img
+                display: none
+                margin: 40px auto 0
+          &__item:nth-child(1)
+            background: url("../images/insta1.png") center no-repeat
+          &__item:nth-child(2)
+            background: url("../images/insta2.png") center no-repeat
+          &__item:nth-child(3)
+            background: url("../images/insta3.png") center no-repeat
+          &__item:nth-child(4)
+            background: url("../images/insta4.png") center no-repeat
+          &__item:nth-child(5)
+            background: url("../images/insta5.png") center no-repeat
+          &__item:nth-child(6)
+            background: url("../images/insta6.png") center no-repeat
+          &__item:nth-child(7)
+            background: url("../images/insta1.png") center no-repeat
+          &__item:nth-child(8)
+            background: url("../images/insta2.png") center no-repeat
+          &__item:nth-child(9)
+            background: url("../images/insta3.png") center no-repeat
+          &__item:hover
+            img
+              display: block
+        &__scrollfield
+          font-weight: 400
+          font-size: 14px
+          height: 120px
+          line-height: 30px
+          color: rgba(255, 255, 255, 0.7)
+          overflow: auto
+
+
+        &__date, &__name
+          font-weight: 400
+          font-size: 14px
+          line-height: 30px
+          display: block
+        &__date
+          color: #737373
+          margin-bottom: 10px
+        &__name
+          color: #34C759
+          margin-top: 10px
+      &__header
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        border-bottom: 2px solid #303030
+        padding: 25px
+        &__logo
+          margin-right: 20px
+        &__name
+          font-weight: 400
+          font-size: 14px
+          line-height: 30px
+          color: #BFBFBF
+        &__button
+          @include cardButton
+          background: #262626
+          border: 2px solid #303030
+          margin-left: 99px
+        .instagram, .facebook
+          margin-left: 78px
+
+
+
+
+
+

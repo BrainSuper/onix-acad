@@ -1,0 +1,57 @@
+@import "../mixins/mixins.sass"
+.works
+  min-height: 567px
+  background-color: $sectionColor
+  padding: 90px 0
+  h1
+    @include sectionTitle
+  h2
+    @include sectionSubtitle
+
+  &_line
+    @include greenLine
+
+  &__advantages
+    display: flex
+    justify-content: space-between
+    width: 100%
+    margin-top: 60px
+    @media (max-width: 1024px)
+      flex-wrap: wrap
+      justify-content: space-around
+    &_item, &_item h3, &_item_line, &_item_descr
+      @include mainTransition
+    &_item
+      width: 255px
+      min-height: 206px
+      padding: 24px 24px 0
+      @include cardParams
+      @media (max-width: 1024px)
+        width: 40%
+        margin-bottom: 20px
+      &:hover
+        background-color: $second
+      &:hover
+        .works__advantages_item_line
+          background-color: #191919
+        .works__advantages_item_descr, h3
+          color: #191919
+      h3
+        font-weight: 400
+        font-size: 22px
+        line-height: 26px
+        letter-spacing: -0.275px
+        text-transform: capitalize
+        color: $primary
+      &_line
+        margin-top: 20px
+        width: 56px
+        height: 2px
+        background-color: $second
+      &_descr
+        margin-top: 24px
+        font-weight: 400
+        font-size: 13px
+        line-height: 18px
+        letter-spacing: -0.1625px
+        color: rgba(255, 255, 255, 0.5)

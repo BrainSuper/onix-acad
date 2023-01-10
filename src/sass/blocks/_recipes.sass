@@ -1,0 +1,167 @@
+@import "../mixins/mixins.sass"
+
+.recipes
+  min-height: 810px
+  padding-top: 90px
+  background-color: $sectionColor
+  h1
+    @include sectionTitle
+    z-index: 1
+  h2
+    @include sectionSubtitle
+    position: relative
+    top: -105px
+    z-index: 2
+    &::before, &::after
+      content: ""
+      width: 50px
+      height: 50px
+      position: absolute
+      z-index: 5
+      top: 22%
+      background-color: $sectionColor
+      @media (max-width: 1110px)
+        display: none
+    &::before
+      left: 281px
+    &::after
+      right: 287px
+  &__line
+    @include greenLine
+    margin-top: -72px
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    margin-top: 60px
+    align-items: flex-end
+    @media (max-width: 1024px)
+      flex-wrap: wrap
+      justify-content: center
+    &__view
+      display: flex
+      height: 26px
+      align-items: center
+      justify-content: flex-start
+      width: 135px
+      &__answer
+        margin-left: 29px
+      &__count
+        margin-left: 12px
+        font-weight: 700
+        font-size: 12px
+        line-height: 30px
+        color: $primary
+    &__breakfast__name, &__comments__item__lunch__name
+      height: 25px
+      border-radius: 6px
+      background: rgba(0, 0, 0, 0.3)
+      mix-blend-mode: normal
+      font-weight: 900
+      font-size: 10px
+      line-height: 25px
+      text-align: center
+      letter-spacing: 1.25px
+      text-transform: uppercase
+      color: $primary
+    &__breakfast
+      padding: 60px 0
+      width: 540px
+      height: 510px
+      background: url("../images/breakfast.png") center no-repeat
+      &__date, &__descr, &__name, &__person, .recipes__wrapper__comments__item__descr
+        color: $primary
+      &__name
+        margin: 0 auto
+        width: 90px
+
+      &__date, &__descr, &__person
+        font-weight: 400
+        text-align: center
+      &__date, &__person
+        font-size: 14px
+        line-height: 30px
+      &__date
+        margin: 65px auto 0
+      &__descr
+        max-width: 411px
+        margin: 25px auto 45px
+        font-size: 24px
+        line-height: 40px
+      &__info
+        margin: 62px auto 0
+      @media (max-width: 590px)
+        max-width: 95%
+    &__comments
+      display: flex
+      flex-direction: column
+      &__item
+        max-width: 540px
+        min-height: 150px
+        margin-top: 30px
+        padding: 30px 20px 20px 30px
+        background: $cardBgColor
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1)
+        border-radius: 6px
+        transition: all 0.2s ease-in
+        @media (max-width: 590px)
+          width: 95%
+          margin: 30px auto 0
+        &_image
+          background: url("../images/breakfast2.png") center no-repeat
+          &:hover
+            background: none
+        &:hover
+          background-color: $second
+
+          .recipes__wrapper__comments__item__subscribers__eye
+            background: url("../icons/blackeye.png") center no-repeat
+          .recipes__wrapper__comments__item__subscribers__answer
+            background: url("../icons/blackanswer.png") center no-repeat
+          .recipes__wrapper__comments__item__lunch__name
+            background: #000000
+          .recipes__wrapper__comments__item__descr, .recipes__wrapper__comments__item__lunch__date, .recipes__wrapper__comments__item__subscribers__count
+            color: $cardBgColor
+        &__subscribers
+
+          &__eye, &__answer
+            width: 26px
+            height: 26px
+          &__eye
+            background: url("../icons/eye.png") center no-repeat
+          &__answer
+            background: url("../icons/answer.png") center no-repeat
+        &__info
+          display: flex
+          justify-content: space-between
+          margin: 10px 0 0 30px
+        &__lunch
+          display: flex
+          justify-content: space-between
+          width: 153px
+          @media (max-width: 425px)
+            justify-content: flex-start
+
+          &__date
+            font-weight: 400
+            font-size: 12px
+            line-height: 25px
+            color: #B3B3B3
+          &__name
+            width: 65px
+        &__descr
+          font-weight: 400
+          //width: 505px
+          font-size: 16px
+          line-height: 30px
+          margin: 0 0 0 30px
+          color: #FFFFFF
+      &__item:nth-child(3)
+        margin-bottom: 0px
+
+
+
+
+
+
+
+
